@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Asincronía y Callback</title>
+</head>
+<body>
+    <main>
+        <ul id="nav">
+            <li><span class="opt" id="definicion">.::Definiciones::.</span></li>
+            <li><span class="opt" id="funcion">.::Funciones::.</span></li>
+            <li><span class="opt" id="callback">.::Callback::.</span></li>
+            <li><span class="opt" id="asincronia">.::Asincronía::.</span></li>
+            <li><span class="opt" id="nota">.::Nota::.</span></li>
+        </ul>
+
+        <section id="_definicion">
+            <div class="def">
+            <br>
+            <h1>Definición de "Callback"</h1>
+            <br><br>
+            <p>Una función de callback es una función que se pasa a otra función como un argumento,<br> 
+                que luego se invoca dentro de la función externa (sin usar paréntesis, lo que denotaría<br>
+                que es una función) para completar algún tipo de rutina o acción.</p>
+            <br><br>
+            <h1>Definición de "Asincronía"</h1>
+            <br><br>
+            <p>Una función asíncrona es aquella que corre en paralelo a otras funciones, pero <br>
+            termina su cometido u objetivo (comparado con otras funciones, incluso aquellas que<br>
+            comienzan después de la que tiene asincronía) al cumplir alguna condición como hacer<br>
+            click o esperar un tiempo determinado.</p>
+            <br>
+            </div>
+        </section>
+
+        <section id="_funcion">
+            <img src="img/callback2.png" class="pic1">
+            <div class="call_exp">
+                <h2>Con la función "Callback" tenemos la<br>
+                    capacidad de mandar llamar una función<br>
+                    sin tener que nombrar a una en específico.<br>
+                    Esto nos ayuda en casos que no querramos<br>
+                    escribir la misma función, pero llamando<br>
+                    a otras funciones cada vez.<br>
+                </h2>
+            </div>
+            <img src="img/asincronia.png" class="pic2">
+            <div class="asi_exp">
+                <h2>Con asincronía podemos hacer que ciertas<br>
+                funciones o cometidos se ejecuten hasta que<br>
+                alguna condición que nosotros decidamos se<br>
+                cumpla. Así tenemos mayor control en la<br>
+                interactividad y capacidad del usuario que<br>
+                esté en nuestra página.</h2>
+            </div>
+        </section>
+
+        <section id="_callback">
+            <img src="img/callback.png" class="pic3">
+            <div class="call_exp2">
+                <center><h2>EXPLICACIÓN DEL EJERCICIO:</h2></center>
+                <br>
+                <h3>Primero, creamos la función que nos permitirá mostrar una variable en el
+                    documento.<br>
+                    Luego, creamos la función que lleve nuestro Callback (en este caso, será
+                    una función que haga la suma de 2 números).<br>
+                    Por último, llamamos a la función de la suma con los parámentros indicados.
+                    <br><br>
+                    En este ejemplo, mandamos llamar al último la función de la suma, siendo
+                    sus parámetros 2 números y un Callback (el nombre de la primera función)
+                    que mandará llamar una función cuando se lo pidamos. Luego, al ejecutarse
+                    la función de suma, usamos el tercer parámetro para que al final de esta
+                    le digamos que queremos ejecutar la primera función, haciendo que el
+                    resultado de la suma sea lo que se muestre.</h3>
+            </div>
+        </section>
+
+        <section id="_asincronia">
+            <img src="img/asincronia2.png" class="pic4">
+            <div class="asi_exp2">
+                <center><h2>EXPLICACIÓN DEL EJERCICIO:</h2></center>
+                <br>
+                <h3>Esta es una función que puede trabajar mientras otras lo hacen.<br><br>
+                    Primero, creamos una función que nos permita mostrar una frase en un documento.<br>
+                    Luego, creamos una función "setTimeout", la cual hará que el callback dentro de ella (o bueno, la función) sea asíncrono. Dentro del paréntesis pondremos los milisegundos que tardará la función en activarse, y luego nuestro Callback, separado por una coma.</h3>
+            </div>
+        </section>
+
+        <section id="_nota">
+            <div class="info_foot">
+            <h1>Para más información sobre el tema:</h1>
+            <br><br>
+            <h2 class="doc">.::Documentación::.</h2>
+            <br>
+            <a href="https://www.w3schools.com/js/js_callback.asp"><h2>Callback W3Schools (ENG)</h2></a>
+            <br>
+            <a href="https://www.w3schools.com/js/js_asynchronous.asp"><h2>Asincronía W3Schools (ENG)</h2></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logo1">
+            <a href="https://www.ual.mx/"><img src="img/logo_ual.png" class="ual"></a>
+        </div>
+        <div class="info">
+            <h2 class="i">Página modificada por:<br>
+                Abdo Sabag 4to ISC
+            </h2>
+        </div>
+        <div class="logo2">
+            <a href="https://www.w3schools.com/"><img src="img/w3s.png" class="w3s"></a>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

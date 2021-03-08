@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    color: rgb(240, 240, 240);
+}
+
+main{
+    height: 88vh;
+    display: grid;
+    grid-template-rows: 50px 5fr;
+}
+
+#nav{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 10px;
+    padding: 0 10px;
+}
+
+li{
+    list-style-type: none;
+}
+
+li span{
+    display: grid;
+    justify-items: center;
+    background-color: rgb(83, 5, 5);
+    color: #fff;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+#_definicion{
+    background-image: url(img/foto1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10vh 15vw;
+}
+#_funcion{
+    background-image: url(img/foto2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+}
+#_callback{
+    background-image: url(img/foto4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a b";
+}
+#_asincronia{
+    background-image: url(img/foto3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a b";
+}
+#_nota{
+    background-image: url(img/foto5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 22vh;
+}
+
+div.def{
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 30px;
+}
+
+.pic1{
+    height: 250px;
+    width: 250px;
+    padding-left: 22vw;
+}
+.pic2{
+    height: 250px;
+    width: 400px;
+    padding-left: 16vw;
+    display: block;
+}
+.call_exp{
+    margin-left: 55vw;
+    bottom: 55vh;
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.76);
+    border-radius: 30px;
+}
+.asi_exp{
+    margin-left: 55vw;
+    bottom: 17vh;
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.76);
+    border-radius: 30px;
+}
+
+.pic3{
+    width: 500px;
+    height: 400px;
+    padding-top: 10vh;
+    padding-left: 6vw;
+}
+.pic4{
+    width: 700px;
+    height: 200px;
+    padding-top: 8vh;
+    padding-left: 25vw;
+}
+.call_exp2{
+    margin-left: 45vw;
+    bottom: 30vh;
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 30px;
+}
+.asi_exp2{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    bottom: 18vh;
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.739);
+    border-radius: 30px;
+}
+
+h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 3px 0px rgb(0, 0, 0);
+}
+
+.doc{
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 3px 0px rgb(0, 0, 0);
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 5px 0px black;
+}
+
+footer{
+    height: 12vh;
+    background-color: rgb(29, 12, 75);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-template-areas: "a b c";
+    border-top: dashed 3px rgb(81, 91, 233);
+    border-left: dashed 3px rgb(81, 91, 233);
+    border-right: dashed 3px rgb(81, 91, 233);
+}
+
+.info_foot{
+    background-color: rgba(0, 0, 0, 0.568);
+    border-radius: 30px;
+    margin: 0px 360px;
+    padding: 20px;
+}
+
+.logo1{
+    grid-area: a;
+    padding: 5px;
+}
+
+.ual{
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 10vw;
+    padding-left: 10vw;
+}
+
+h2.i{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.logo2{
+    grid-area: c;
+    padding: 5px;
+}
+
+.w3s{
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 20vw;
+    padding-left: 6.5vw;
+}
