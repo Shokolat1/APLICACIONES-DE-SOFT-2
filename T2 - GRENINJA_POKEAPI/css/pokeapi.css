@@ -1,0 +1,486 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+    text-align: center;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* Cabecera */
+header{
+    background-color: rgb(173, 32, 32);
+    font-weight: bolder;
+    text-shadow: black 3px 0px;
+    border-bottom: solid 1vh white;
+}
+
+/* Pie de Página */
+footer{
+    font-weight: bold;
+    text-shadow: black 3px 0px;
+    border-top: solid 1vh white;
+    background-color: rgb(173, 32, 32);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "a b";
+}
+
+.author{
+    grid-area: a;
+}
+.action{
+    grid-area: b;
+}
+
+audio{
+    width: 0px;
+}
+
+/* Contenedor donde la API se conecta */
+#contenedor{
+    background-image: url(../img/pokedex.jpg);
+    background-size: cover;
+    background-position-y: center;
+    height: 80vh;
+    text-transform: capitalize;
+}
+
+/* Contenedor/slide de info */
+.slide{
+    display: none;
+    width: 100%;
+    height: 80vh;
+}
+
+/* Bloques o divisiones en cada slide */
+.cuadro1, .cuadro2, .cuadro3, .tipos, .evo{
+    display: block;
+    height: 80vh;
+    position: absolute;
+}
+
+/* Info en slide #1 */
+.stats h3, .mov h3{
+    border-bottom: solid blanchedalmond 1vh;
+}
+
+/* Info en slide #2 */
+.tipos div, .evo div{
+    display: inline-block;
+    overflow-y: visible;
+}
+
+.evo h3, .tipos h3{
+    border-bottom: solid blanchedalmond 1vh;
+}
+
+/* Fondo de los textos en el contenedor */
+.nameInfo, .stats, .mov, .tipos span, .tipos h3, .evo h3, .evo span{
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.835);
+}
+
+/* Botón de "siguiente" */
+.next{
+    cursor: pointer;
+    position: absolute;
+    width: 4vw;
+    height: 10.5vh;
+    margin-top: -20px;
+    padding: 2.5vh;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: rgba(116, 113, 113, 0.8);
+    border: solid 2px rgb(255, 251, 251);
+}
+
+.next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Efecto/animación fade */
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* --------------------------------------------------------------------- */
+
+/* Responsivo en pc */
+@media(min-width: 801px){
+    /* Cabecera */
+    header{
+        font-size: 6vh;
+        padding-top: 1.5vh;
+        padding-bottom: 2.5vh;
+    }
+    .p1, .p2{
+        height: 4.5vh;
+    }
+    
+    /* Pie de Página */
+    footer{
+        font-size: 3vh;
+        padding-top: 1.5vh;
+    }
+    
+    /* Contenedor donde la API se conecta */
+    #contenedor{
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    
+    /* Bloques o divisiones en cada slide */
+    .cuadro1{
+        width: 30vw;
+        left: 3%;
+        top: 35vh;
+    }
+    .cuadro2{
+        width: 36vw;
+        left: 32vw;
+        padding-top: 2vh;
+    }
+    .cuadro3{
+        width: 30vw;
+        right: 4%;
+        top: 35vh;
+    }
+    
+    /* Info en slide #1 */
+    .nameInfo{
+        margin-left: 8vw;
+        margin-right: 8vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        font-size: 3vh;
+    }
+    
+    .stats{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    .stats h3, .mov h3{
+        font-size: 4vh;
+    }
+    .stats span, .mov span{
+        font-size: 3.5vh;
+    }
+    
+    .mov{
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-top: 2vh;
+        padding-bottom: 3vh;
+    }
+    
+    .greninja{
+        margin-left: 1vw;
+    }
+    .greninja img{
+        width: 70%;
+    }
+    
+    /* Info en slide #2 */
+    .tipos{
+        width: 48vw;
+        left: 4%;
+        top: 20vh;
+        padding: 0vw 3vw;
+    }
+    .evo{
+        width: 48vw;
+        right: 4%;
+        top: 15vh;
+        padding: 0vw 3vw;
+    }
+    
+    .tipos .type1 img, .tipos .type2 img{
+        width: 15vw;
+        height: 33vh;
+        margin-top: 3vh;
+    }
+    .tipos .type1, .evo .evo1{
+        padding-right: 2vw;
+    }
+    
+    .evo img{
+        margin-top: 3vh;
+        width: 19vw;
+        height: 40vh;
+    }
+    
+    .evo h3, .tipos h3{
+        margin: 0px 8vw;
+        padding: 2vh 0px;
+        font-size: 4.5vh;
+    }
+    .evo span, .tipos span{
+        padding: .5vh 2vw;
+        font-size: 3.8vh;
+    }
+
+    .next{
+        top: 50vh;
+    }
+}
+
+/* --------------------------------------------------------------------- */
+
+/* Responsivo en tablets */
+@media (min-width: 401px) and (max-width: 800px){
+    /* Cabecera */
+    header{
+        font-size: 4.5vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+
+    }
+    .p1, .p2{
+        height: 3.5vh;
+    }
+    
+    /* Pie de Página */
+    footer{
+        font-size: 2vh;
+        padding-top: 3vh;
+    }
+    
+    /* Contenedor donde la API se conecta */
+    #contenedor{
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+    
+    /* Bloques o divisiones en cada slide */
+    .cuadro1{
+        right: 0;
+        width: 50vw;
+        top: 50vh;
+    }
+    .cuadro2{
+        position: absolute;
+        top: 5vh;
+        width: 98vw;
+        height: 38vh;
+        padding-top: 2vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a b";
+    }
+    .cuadro3{
+        width: 45vw;
+        left: 5%;
+        top: 41vh;
+    }
+    
+    /* Info en slide #1 */
+    .nameInfo{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+        font-size: 3vh;
+    }
+    .greninja img{
+        width: 100%;
+    }
+
+    .stats{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .mov{
+        padding: 2vh 2vh;
+    }
+    
+    .stats h3, .mov h3{
+        font-size: 3.2vh;
+    }
+    .stats span, .mov span{
+        font-size: 3vh;
+    }
+    
+    /* Info en slide #2 */
+    .tipos{
+        width: 90vw;
+        top: 10vh;
+    }
+
+    .evo{
+        width: 90vw;
+        position: absolute;
+        top: 43vh;
+    }
+    
+    .tipos .type1 img, .tipos .type2 img{
+        width: 18vw;
+        margin-top: 2vh;
+        display: inline-block;
+    }
+    .tipos .type1, .evo .evo1{
+        padding-right: 2vw;
+    }
+    
+    .evo img{
+        margin-top: 3vh;
+        width: 25vw;
+    }
+    
+    .evo h3, .tipos h3{
+        margin: 0px 8vw;
+        padding: 2vh 0px;
+        font-size: 4.5vh;
+    }
+    .evo span, .tipos span{
+        padding: .7vh 2.5vw;
+        font-size: 3.5vh;
+    }
+
+    /* Botón de "siguiente" */
+    .next{
+        top: 40vh;
+    }
+}
+
+/* --------------------------------------------------------------------- */
+
+/* Responsivo en celulares */
+@media(max-width: 400px){
+    /* Cabecera */
+    header{
+        font-size: 4vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    .p1, .p2{
+        height: 3vh;
+    }
+    
+    /* Pie de Página */
+    footer{
+        font-size: 2vh;
+        padding-top: 2vh;
+        display: block;
+    }
+    
+    /* Contenedor donde la API se conecta */
+    #contenedor{
+        padding-left: .5vw;
+        padding-right: .5vw;
+    }
+    
+    /* Bloques o divisiones en cada slide */
+    .cuadro1{
+        position: absolute;
+        width: 90vw;
+        top: 32.5vh;
+    }
+    .cuadro2{
+        width: 99vw;
+        height: 38vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a b";
+        top: 1.5vh;
+    }
+    .cuadro3{
+        position: absolute;
+        width: 94vw;
+        left: 3vw;
+        top: 61vh;
+    }
+    
+    /* Info en slide #1 */
+    .nameInfo{
+        margin-left: 8vw;
+        margin-right: 8vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        font-size: 2.3vh;
+    }
+    .greninja img{
+        width: 100%;
+    }
+
+    .stats{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .mov{
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-top: 2vh;
+        padding-bottom: 3vh;
+    }
+    .stats h3, .mov h3{
+        font-size: 3vh;
+    }
+    .stats span, .mov span{
+        font-size: 2.4vh;
+    }
+    
+    /* Info en slide #2 */
+    .tipos{
+        width: 90vw;
+        top: 10vh;
+    }
+
+    .evo{
+        width: 90vw;
+        position: absolute;
+        top: 46vh;
+    }
+    
+    .tipos .type1 img, .tipos .type2 img{
+        width: 18vw;
+        margin-top: 2vh;
+        display: inline-block;
+    }
+    .tipos .type1, .evo .evo1{
+        padding-right: 6vw;
+    }
+    
+    .evo img{
+        margin-top: 2vh;
+        width: 28vw;
+    }
+    
+    .evo h3, .tipos h3{
+        margin: 0px 8vw;
+        padding: 2vh 0px;
+        font-size: 4.2vh;
+    }
+    .evo span, .tipos span{
+        padding: 1vh 3vw;
+        font-size: 3.2vh;
+    }
+
+    /* Botón de "siguiente" */
+    .next{
+        top: 45vh;
+    }
+}

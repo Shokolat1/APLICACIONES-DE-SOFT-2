@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Abdo Sabag ISC 4to">
+    <meta name="keywords" content="Greninja, Pokémon, PokéApi, Entry, Pokédex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/poke_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/pokeapi.css">
+    <title>PokéEntry</title>
+</head>
+<body>
+    <header>
+        <img src="./img/poke_icon.png" class="p1">
+        Greninja Pokédex Entry
+        <img src="./img/poke_icon.png" class="p2">
+    </header>
+    <div class="carrusel">
+        <main id="contenedor"></main>
+
+        <!-- Botón de siguiente -->
+        <a class="next" onclick="nextS(-1)">&#10095;</a>
+    </div>
+    <footer>
+        <h3 class="author">Page made by: Abdo Sabag ISC 4to</h3>
+        <br>
+        <h3 class="action">CLICK THE BLUE AREA TO START!</h3>
+        <br>
+        <audio controls id="song" loop=1 autoplay>
+            <source src="./audio/Pokemon MT.mp3" type="audio/mpeg">
+            <source src="./audio/Pokemon MT.ogg" type="audio/ogg">
+        </audio>
+    </footer>
+    <script src="./js/pokeapi.js"></script>
+</body>
+</html>
