@@ -3,7 +3,7 @@ cancion.volume = 0.25;
 
 let _main = document.querySelector('#contenedor') 
 
-pokemon();
+_main.addEventListener('click', pokemon);
 
 function pokemon(){
     fetch("https://pokeapi.co/api/v2/pokemon/greninja")
@@ -13,8 +13,8 @@ function pokemon(){
         <div class="slide fade">
             <div class="cuadro1">
                 <div class="stats">
-                <h3>BASE STATS</h3>
-                <br>
+                    <h3>BASE STATS</h3>
+                    <br>
                     <span>${res.stats[0].stat.name}: </span>
                     <span>${res.stats[0].base_stat}</span>
                     <br>
