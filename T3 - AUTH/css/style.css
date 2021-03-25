@@ -1,0 +1,95 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow-y: hidden;
+}
+
+header{
+    height: 10vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-bottom: solid 5px rgba(61, 66, 87, 0.513);
+}
+header h1{
+    color: white;
+    text-align: center;
+    padding-top: 2vh;
+    text-shadow: black 3px 2px;
+}
+
+#img img{
+    height: 8vh;
+    position: absolute;
+    top: 1vh;
+    left: 3vw;
+}
+
+#new_user, #sign_out, #log_in{
+    height: 4vh;
+    background-color: rgba(128, 128, 128, 0.76);
+    color: black;
+    position: absolute;
+    right: 3vw;
+    top: 1vh;
+    text-align: center;
+    padding: 10px;
+    padding-top: 11px;
+    border-radius: 10px;
+    border: solid 2px rgba(65, 65, 65, 0.644);
+}
+#new_user{
+    right: 10vw;
+}
+#new_user:hover, #sign_out:hover, #log_in:hover{
+    background-color: rgba(85, 85, 85, 0.76);
+    border: solid 2px rgba(49, 49, 49, 0.644);
+    color: rgba(211, 200, 184, 0.842);
+}
+
+main{
+    height: 80vh;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#new, #content, #check{
+    position: absolute;
+    left: 35vw;
+    width: 30vw;
+    text-align: center;
+    padding: 10px;
+    top: 18vh;
+    background-color: rgba(231, 228, 228, 0.842);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#new button, #check button{
+    padding: 5px;
+    font-weight: bold;
+    border: solid .5px rgba(29, 29, 29, 0.739);
+}
+#new button:hover, #check button:hover{
+    background-color: rgba(172, 172, 172, 0.575);
+}
+
+#new input, #check input{
+    font-size: 14px;
+    padding: 4px;
+    margin-top: 5px;
+}
+
+footer{
+    height: 10vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-top: solid 5px rgba(61, 66, 87, 0.513);
+    text-align: center;
+}
+footer h2{
+    padding-top: 1.5vh;
+    color: white;
+    text-shadow: black 3px 2px;
+}

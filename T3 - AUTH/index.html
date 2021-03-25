@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abdo Sabag ISC 4to">
+    <link rel="shortcut icon" href="./img/login_img.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>USER AUTH</title>
+</head>
+<body>
+    <header>
+        <div id="img">
+            <img src="./img/login_img.png">
+        </div>
+        <h1>Company Database Auth</h1>
+        <div id="new_user">Register</div>
+        <div id="log_in">Log In</div>
+        <div id="sign_out" style="display: none;">Sign Out</div>
+    </header>
+    <main>
+        <section id="outside">
+            <div id="register" style="display: none;">
+                <div id="new">
+                    <fieldset>
+                        <legend><h2>Register Now!</h2></legend>
+                        <br>
+                        <h3>Sign in with email and password</h3>
+                        <label for="email">Email you wish to register:</label>
+                        <br>
+                        <input type="email" id="email" placeholder="">
+                        <br><br>
+                        <label for="pass">Password for this account:</label>
+                        <br>
+                        <input type="password" id="pass" placeholder="">
+                        <br><br>
+                        <button id="reg_user">Register User</button>
+                        <br><br>
+                    </fieldset>
+                </div>
+            </div>
+            <div id="auth" style="display: none;">
+                <div id="check">
+                    <fieldset>
+                        <legend><h2>Log In!</h2></legend>
+                        <br>
+                        <h3>Log in with email and password</h3>
+                        <label for="email_login">User email:</label>
+                        <br>
+                        <input type="email" id="email_l">
+                        <br><br>
+                        <label for="pass_login">Password for this account:</label>
+                        <br>
+                        <input type="password" id="pass_l">
+                        <br><br>
+                        <button id="log_user">Log In</button>
+                        <br><br>
+                        <h3>Log in with a different method</h3>
+                        <br>
+                        <button id="google">Log In with Google Account</button>
+                        <br><br>
+                        <button id="fb">Log In with Facebook Account</button>
+                        <br><br>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section id="inside" style="display: none;">
+            <div id="content">This is the content of the page, welcome!</div>
+        </section>
+    </main>
+    <footer>
+        <h2>Page made by: Abdo Sabag ISC 4th semester</h2>
+    </footer>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+<script src="./js/index.js"></script>
+</body>
+</html>
