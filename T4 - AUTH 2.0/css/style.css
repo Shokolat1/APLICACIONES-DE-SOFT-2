@@ -1,0 +1,167 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial;
+}
+
+header{
+    height: 11vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0, 143, 172) 100%);
+    border-bottom: solid 5px rgba(61, 66, 87, 0.513);
+}
+header h2{
+    color: white;
+    text-align: center;
+    padding-top: 1.5vh;
+    text-shadow: black 3px 2px;
+}
+
+#img img{
+    height: 8vh;
+    position: absolute;
+    top: 1vh;
+    left: 3vw;
+}
+
+#welcome{
+    background-image: url("../img/welcome_gif.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 45vw;
+    border-radius: 3vh;
+    position: absolute;
+    top: 16vh;
+    left: 28vw;
+}
+
+#new_user, #sign_out, #log_in{
+    height: 6vh;
+    color: rgb(251, 251, 251);
+    position: absolute;
+    right: 3vw;
+    top: 2.2vh;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+#new_user{
+    right: 10vw;
+}
+
+main{
+    height: 80vh;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#new, #check, #create, #update_info{
+    position: absolute;
+    left: 32.5vw;
+    width: 35vw;
+    text-align: center;
+    top: 23vh;
+    background-color: rgba(83, 83, 83, 0.52);
+    border-radius: 10px;
+    padding: 20px;
+}
+#check{
+    top: 20vh;
+    padding-bottom: 30px;
+}
+
+#new button, #check button, #create button, #update_info button{
+    font-weight: bold;
+}
+#new button:hover, #check button:hover, #create button:hover, #update_info button:hover{
+    background-color: rgba(93, 140, 179, 0.575);
+}
+
+#check .img_login{
+    width: 24vw;
+    height: 7vh;
+    position: absolute;
+    left: 6vw;
+}
+#check .img_login img{
+    width: 2.2vw;
+    display: inline-block;
+    margin-right: 15px;
+}
+#check .img_login img:hover{
+    opacity: 60%;
+}
+
+#inside{
+    width: 100vw;
+    
+}
+#inside #nav_bar{
+    background-color: rgba(81, 124, 173, 0.787);
+    border-radius: 10px;
+    width: 90vw;
+    height: 8vh;
+    position: absolute;
+    top: 13.5vh;
+    left: 5vw;
+    padding-left: 15vw;
+}
+#inside #nav_bar div{
+    width: 13vw;
+    display: inline-block;
+    font-size: 3vh;
+    margin: 1.7vh 5vw 1.7vh 0vw;
+    border-right: solid white 2px;
+}
+#inside #nav_bar #b_delete{
+    border-right: none;
+}
+
+#show, #create, #upd, #delete{
+    width: 90vw;
+    height: 65vh;
+    position: absolute;
+    left: 5vw;
+    top: 23vh;
+}
+#show, #curr_usInfo, #delete_table{
+    padding-left: 25vw;
+    text-align: center;
+}
+#create{
+    width: 35vw;
+    height: 50vh;
+    left: 35vw;
+    top: 30vh;
+}
+#update_info{
+    width: 30vw;
+    height: 43vh;
+    left: 30vw;
+    top: 23.5vh;
+}
+#delete_table{
+    position: absolute;
+    top: 11vh;
+}
+#d_item{
+    position: absolute;
+    left: 41vw;
+    top: 30vh;
+    font-size: 3vh;
+}
+
+footer{
+    height: 9vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0, 143, 172) 100%);
+    border-top: solid 5px rgba(61, 66, 87, 0.513);
+    text-align: center;
+    padding-top: 2vh;
+}
+footer h4{
+    color: white;
+    text-shadow: black 3px 2px;
+}

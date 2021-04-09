@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abdo Sabag ISC 4to">
+    <link rel="shortcut icon" href="./img/login_img.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BANK USER AUTH</title>
+</head>
+<body>
+    <header>
+        <div id="img">
+            <img src="./img/login_img.png">
+        </div>
+        <h2>Virtual Bank Auth</h2>
+        <div id="new_user" class="btn btn-outline-info">Register</div>
+        <div id="log_in" class="btn btn-outline-info">Log In</div>
+        <div id="sign_out" style="display: none;" class="btn btn-outline-info">Sign Out</div>
+    </header>
+    <main>
+        <section id="outside">
+            <div id="welcome" style="display: block;"></div>
+            <div id="new" style="display: none;">
+                <fieldset>
+                    <legend><h3>Register Now!</h3></legend>
+                    <label for="email">Email you wish to register:</label>
+                    <input type="email" id="email" placeholder="" class="form-control" aria-describedby="emailHelp">
+                    <br>
+                    <label for="pass">Password for this account:</label>
+                    <br>
+                    <input type="password" id="pass" placeholder="" class="form-control">
+                    <br><br>
+                    <button id="reg_user" class="btn btn-primary">Register User</button>
+                    <br>
+                </fieldset>
+            </div>
+            <div id="check" style="display: none;">
+                <fieldset>
+                    <legend><h3>Log In!</h3></legend>
+                    <label for="email_login">User email:</label>
+                    <input type="email" id="email_l" class="form-control" aria-describedby="emailHelp">
+                    <br>
+                    <label for="pass_login">Password for this account:</label>
+                    <input type="password" id="pass_l" class="form-control">
+                    <br>
+                    <button id="log_user" class="btn btn-primary">Log In</button>
+                    <br><br>
+                    <h5>Log in with a different method:</h5>
+                    <div class="img_login">
+                        <img src="./img/GOOGLE.png" id="google">
+                        <img src="./img/FB.png" id="fb">
+                        <img src="./img/TWITTER.png" id="twitter">
+                        <img src="./img/GITHUB.png" id="gh">
+                        <img src="./img/YAHOO.png" id="yahoo">
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+        </section>
+        <section id="inside" style="display: none;">
+            <div id="nav_bar">
+                <div id="b_show">Show All Data</div>
+                <div id="b_create">New User</div>
+                <div id="b_update">Update User Info</div>
+                <div id="b_delete">Delete User Info</div>
+            </div>
+            <table id="show" style="display: none;" class="table table-hover"></table>
+            <div id="create" style="display: none;">
+                <fieldset>
+                    <legend><h3>Add User Information</h3></legend>
+                    <label for="f_name">First name:</label>
+                    <input type="text" id="f_name">
+                    <br>
+                    <label for="l_name">Last name:</label>
+                    <input type="text" id="l_name">
+                    <br>
+                    <label for="card_num">Card Number:</label>
+                    <input type="number" id="card_num">
+                    <br>
+                    <label for="exp_month">Expiration Month (##):</label>
+                    <input type="number" id="exp_month" min="1" max="12">
+                    <br>
+                    <label for="exp_year">Expiration Year: (####)</label>
+                    <input type="number" id="exp_year" min="2020" max="9999">
+                    <br><br>
+                    <button id="c_item" class="btn btn-outline-success">Create Item</button>
+                    <br><br>
+            </div>
+            <div id="upd" style="display: none;">
+                <center><h5 style="background-color: rgba(0, 0, 0, 0.822); border-radius: 10px; padding: 1vh; width: 25vw;">User's Current Information</h5></center>
+                <table id="curr_usInfo" class="table table-hover"></table>
+                <br><br>
+                <div id="update_info">
+                        <fieldset>
+                        <legend><h3>Update User Information</h3></legend>
+                        <label for="l_name_upd">Last name:</label>
+                        <input type="text" id="l_name_upd">
+                        <br>
+                        <label for="f_name_upd">First name:</label>
+                        <input type="text" id="f_name_upd">
+                        <br>
+                        <label for="exp_month_upd">Expiration Month (##):</label>
+                        <input type="number" id="exp_month_upd" min="1" max="12">
+                        <br>
+                        <label for="exp_year_upd">Expiration Year: (####)</label>
+                        <input type="number" id="exp_year_upd" min="2020" max="9999">
+                        <br><br>
+                        <button id="upd_item" class="btn btn-outline-success">Update</button>
+                        <br><br>
+                </div>
+            </div>
+            <div id="delete" style="display: none;">
+                <br>
+                <center><h5 style="background-color: rgba(0, 0, 0, 0.822); border-radius: 10px; padding: 1vh; width: 25vw;">Information that will be deleted</h5></center>
+                <table id="delete_table" class="table table-hover"></table>
+                <br><br>
+                <button id="d_item" class="btn btn-danger">Delete</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>Page made by: Abdo Sabag ISC 4th semester</h4>
+    </footer>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+<script src="./js/index.js"></script>
+</body>
+</html>
