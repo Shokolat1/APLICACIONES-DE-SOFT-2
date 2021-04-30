@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abdo Sabag ISC 4to">
+    <link rel="shortcut icon" href="./game/assets/bone.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./game/config/phaser.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+    <title>.:: Fluffy's Bone Hunt ::.</title>
+</head>
+<body>
+    <section id="outside">
+    <nav class="navbar navbar-expand-lg nav-tabs">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <img src="./game/assets/bone.png" style="height: 5vh; padding-right: 1vw; margin-top: 7px;">
+            </li>
+            <li class="nav-item active" id="proj">
+              <a class="nav-link" style="font-weight: bolder;">Fluffy's Bone Hunt
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="new_user">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="log_in">Log In</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" style="font-weight: bolder;">AUTHOR: Abdo Sabag
+                </a>
+              </li>
+            <li style="width: 26vw;"></li>
+              <li style="font-weight: bolder;">
+                <a class="nav-link">My Previous Work:</a>
+              </li>
+              <li class="nav-item" id="proj">
+                <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T1%20-%20CALLBACK">Callbacks</a>
+              </li>
+              <li class="nav-item" id="proj">
+                <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T2%20-%20GRENINJA_POKEAPI">Greninja PokéAPI</a>
+              </li>
+              <li class="nav-item" id="proj">
+                <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T3%20-%20AUTH">Auth</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T5%20-%20PHASER%20GAME">Phaser Game</a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+    <br>
+            <div id="welcome" style="display: block;"></div>
+            <div id="new" style="display: none;">
+                <form>
+                    <fieldset>
+                      <legend>Register Now!</legend>
+                      <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" class="form-control" id="pass" placeholder="Password">
+                      </div>
+                    </fieldset>
+                    <p class="text-success">We´ll never share your data with third parties ;)</p>
+                    <button type="button" id="reg_user" class="btn btn-outline-primary">Register User</button>
+                </form>
+            </div>
+            <div id="check" style="display: none;">
+                <form>
+                    <fieldset>
+                      <legend>Log In!</legend>
+                      <div class="form-group">
+                        <label for="email_l">Email address</label>
+                        <input type="email" class="form-control" id="email_l" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pass_l">Password</label>
+                        <input type="password" class="form-control" id="pass_l" placeholder="Password">
+                      </div>
+                    </fieldset>
+                    <p class="text-success">Oh? so you want to try to get a high score again?</p>
+                    <p class="text-warning">Bring it on!</p>
+                    <button type="button" id="log_user" class="btn btn-outline-primary">Play!</button>
+                    <br><br>
+                    <button type="button" id="google" class="btn btn-outline-primary">Log In with Google Account</button>
+                </form>
+            </div>
+        </section>
+        <section id="inside" style="display: none;">
+            <nav class="navbar navbar-expand-lg nav-tabs">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <img src="./game/assets/bone.png" style="height: 5vh; padding-right: 1vw; margin-top: 7px;">
+                        </li>
+                    <li class="nav-item active" id="b_scores">
+                      <a class="nav-link">Leaderboard (TOP 5)
+                        <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item" id="b_game">
+                      <a class="nav-link">The Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="sign_out">Sign Out</a>
+                      </li>
+                      <li style="width: 35vw;"></li>
+                      <li style="font-weight: bolder;">
+                        <a class="nav-link">My Previous Work:</a>
+                      </li>
+                      <li class="nav-item" id="proj">
+                        <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T1%20-%20CALLBACK">Callbacks</a>
+                      </li>
+                      <li class="nav-item" id="proj">
+                        <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T2%20-%20GRENINJA_POKEAPI">Greninja PokéAPI</a>
+                      </li>
+                      <li class="nav-item" id="proj">
+                        <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T3%20-%20AUTH">Auth</a>
+                      </li>
+                      <li class="nav-item" id="proj">
+                        <a class="nav-link" href="https://github.com/Shokolat1/APLICACIONES-DE-SOFT-2/tree/main/T5%20-%20PHASER%20GAME">Phaser Game</a>
+                      </li>
+                  </ul>
+                </div>
+            </nav>
+            <div id="show" style="display: block;">
+                <table id="LBtable" class="table table-hover" style="text-align: center;"></table>
+                <div id="map" style="height: 40vh; width: 50vw;"></div>
+            </div>
+            <br>
+            <div id="game" style="display: none;"></div>
+            <button id="bNewScore" class="btn btn-primary" style="display: none;">Add My Score</button>
+            <div id="newPlayer" style="display: none;"></div>
+        </section>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+<script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+<script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+
+<script type="module" src="./js/crud.js"></script>
+</body>
+</html>

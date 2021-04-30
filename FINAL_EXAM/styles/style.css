@@ -1,0 +1,65 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: url('../crud_assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -120px;
+}
+
+/* NAVBAR ------------------------------------------------------- */
+.navbar{
+    background-color: rgba(58, 58, 58, 0.609);
+}
+#proj, #new_user, #log_in, #b_scores, #b_game{
+    border-right: solid white 2px;
+}
+
+/* WELCOME ------------------------------------------------------ */
+#welcome{
+    background-image: url("../crud_assets/welcome_gif.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 45vw;
+    border-radius: 3vh;
+    position: absolute;
+    top: 16vh;
+    left: 28vw;
+}
+
+/* GAME --------------------------------------------------------- */
+#game{
+    margin-left: 19vw;
+}
+#bNewScore{
+    position: absolute;
+    top: 48vh;
+    right: 7vw;
+}
+
+/* MAP ---------------------------------------------------------- */
+#map{
+    position: absolute;
+    left: 26vw;
+}
+
+/* FORMS -------------------------------------------------------- */
+#new, #check, #newPlayer{
+    width: 30vw;
+    text-align: center;
+    background-color: rgba(32, 47, 77, 0.897);
+    padding: 2vw;
+    position: absolute;
+    left: 34vw;
+    top: 26vh;
+}
+#check{
+    top: 22vh;  
+}
+#newPlayer{
+    top: 18vh;
+}
